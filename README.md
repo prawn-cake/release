@@ -40,7 +40,27 @@ If a project is python{2,3}
     [bdist_wheel]
     universal=1
 
-
+## One-branch project release
+    
+    # After commiting latest changes
+    
+    # Update changelog
+    md-changelog feature "Feature X"
+    ...
+    
+    # Update changelog release entry 
+    md-changelog release
+    
+    # Bump version
+    bumpversion {patch,minor,major}
+    
+    # Attach a tag
+    git tag -a 1.1.1 -m "Version 1.1.1"
+    
+    # Push changes with tags
+    git push origin master --tags
+     
+    
 ## Two-branch project release
 
 Recipe for the projects using master-develop branching model
